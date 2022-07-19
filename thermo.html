@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thermo</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items:center;
+            background: rgb(4,4,44);
+        }
+        html{
+            font-size: 62.5%;
+        }
+        .circle{
+            width: 4rem;
+            height:4rem;
+            border-radius: 50%;
+            border: 4px solid orange;
+            border-top: transparent;
+          /* border-left: transparent; */
+          /* border-right: transparent; */
+          /* background:linear-gradient(180deg,transparent 50%,gray 50%); */
+          /* background:linear-gradient(180deg,red 50%,gray 50%); */
+          /* box-shadow: 0 0 0 2rem #fff; */
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .rod{
+            position: absolute;
+            top: -14.5rem;
+            border-radius: 50px;
+            width: 2.5rem;
+            height: 15rem;
+            border: 4px solid orange;
+            border-bottom: transparent;
+            display: grid;
+            place-items: center;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        .subrod{
+            position: absolute;
+            width: 30%;
+            height: .4rem;
+            background-color: orange;
+            bottom: -.2rem;
+        }
+        .subcir{
+            position: absolute;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: orange;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <audio src="" id="beep" autoplay></audio>
+    <div class="circle">
+        <div class="rod">
+            <div class="subrod"></div>
+        </div>
+        <div class="subcir"></div>
+    </div>
+    <script>
+
+
+        const rod = document.querySelector('.subrod');
+        const mrod = document.querySelector('.rod');
+        const circle = document.querySelector('.circle');
+        const subcircle = document.querySelector('.subcir');
+        const thermo = ()=>{
+            setTimeout(() => {
+                rod.style.height="3rem";
+                rod.style.background = 'orange';
+                circle.style.borderColor="orange";
+                mrod.style.borderColor="orange";
+                subcircle.style.background="orange";
+            }, 500);
+            setTimeout(() => {
+                rod.style.height="5rem";
+            }, 1000);
+            setTimeout(() => {
+                rod.style.height="6rem";
+            }, 1500);
+            setTimeout(() => {
+                rod.style.height="7rem";
+            }, 2000);
+            setTimeout(() => {
+                rod.style.height="8rem";
+            }, 2500);
+            setTimeout(() => {
+                rod.style.height="9rem";
+            }, 3000);
+            setTimeout(() => {
+                rod.style.height="10rem";
+            }, 3500);
+            setTimeout(() => {
+                rod.style.height="11rem";
+            }, 4000);
+            setTimeout(() => {
+                rod.style.height="12rem";
+            }, 4500);
+            setTimeout(() => {
+                const beep = new Audio('thermo.mp3');
+                beep.play();
+
+                rod.style.height="14rem";
+                rod.style.background="red";
+                circle.style.borderColor="red";
+                mrod.style.borderColor="red";
+                subcircle.style.background="red";
+            }, 5000);
+        }
+
+thermo();
+        // setInterval(thermo,6000);
+        
+
+    </script>
+</body>
+</html>
