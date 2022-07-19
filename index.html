@@ -81,6 +81,7 @@
         const mrod = document.querySelector('.rod');
         const circle = document.querySelector('.circle');
         const subcircle = document.querySelector('.subcir');
+    const bp = document.querySelector('#beep')
         const thermo = ()=>{
             setTimeout(() => {
                 rod.style.height="3rem";
@@ -114,6 +115,8 @@
                 rod.style.height="12rem";
             }, 4500);
             setTimeout(() => {
+
+               bp.src="thermo.mp3";
                 const beep = new Audio('thermo.mp3');
                 beep.play();
 
