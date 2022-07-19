@@ -67,7 +67,7 @@
     </style>
 </head>
 <body>
-    <audio src="" id="beep" autoplay></audio>
+    <audio src="thermo.mp3" id="beep" autoplay></audio>
     <div class="circle">
         <div class="rod">
             <div class="subrod"></div>
@@ -117,8 +117,7 @@
             setTimeout(() => {
 
                bp.src="thermo.mp3";
-                const beep = new Audio('thermo.mp3');
-                beep.play();
+         
 
                 rod.style.height="14rem";
                 rod.style.background="red";
@@ -129,7 +128,7 @@
         }
 
 thermo();
-        // setInterval(thermo,6000);
+       setInterval(thermo,6000);
         
 
     </script>
